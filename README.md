@@ -1,3 +1,4 @@
 => CI/CD Using Jenkins, Ansible, Docker and Github Webhooks on AWS
 
-(https://github.com/user-attachments/assets/70f9dd1d-fe21-434a-a49a-86270d8c45a6)
+
+![readmeimg](https://github.com/user-attachments/assets/f9246577-fba3-4be6-99c9-ccad37f5424a)
