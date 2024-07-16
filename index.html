@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's Islamic Prayer Times</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Bona+Nova:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+        body {
+            margin: 0;
+            font-family: "Bona Nova", serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            filter: blur(8px);
+            object-fit: cover;
+        }
+
+        #content {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 700px;
+            color: bisque;
+        }
+
+        .welcomeMsg_h1 {
+            margin: 10px 0;
+            font-size: 2.5rem;
+        }
+
+        #inputs_div {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .inps {
+            width: 100px;
+            height: 40px;
+            font-size: 1rem;
+            border-radius: 20px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        #button_div {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #btn {
+            width: 150px;
+            height: 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: bisque;
+            border: none;
+            font-size: 1rem;
+            color: black;
+            align-items: center;
+        }
+
+        #back_btn {
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: bisque;
+            border: none;
+            font-size: 1rem;
+            color: black;
+            display: none;
+        }
+
+        #prayers_div {
+            margin-top: 20px;
+            visibility: hidden;
+        }
+
+        .prayer {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .font {
+            font-family: "Noto Nastaliq Urdu", serif;
+        }
+
+        .fontEng {
+            font-family: "Bona Nova", serif;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: bisque;
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="fontEng">
+    <div id="container">
+        <img src="Ammad photos, images, assets.jpg" alt="Background Image">
+        <div id="content">
+            <div id="welcomeMsg_div">
+                <h1 class="welcomeMsg_h1 font">السلام عليكم</h1>
+                <h1 class="welcomeMsg_h1 fontEng">Islamic Prayer Times</h1>
+            </div>
+            <div id="inputs_div">
+                <input class="inps" type="number" placeholder="Day">
+                <input class="inps" type="number" placeholder="Month">
+                <input class="inps" type="number" placeholder="Year">
+            </div>
+            <div id="button_div">
+                <button id="btn" class="fontEng">Get Prayer Times</button>
+                <button id="back_btn" class="fontEng">Back</button>
+            </div>
+            <div id="prayers_div" class="fontEng">
+                <h1 class="prayer">Fajr <span class="prayerTime"></span></h1>
+                <h1 class="prayer">Duhr <span class="prayerTime"></span></h1>
+                <h1 class="prayer">Asr <span class="prayerTime"></span></h1>
+                <h1 class="prayer">Maghrib <span class="prayerTime"></span></h1>
+                <h1 class="prayer">Isha <span class="prayerTime"></span></h1>
+            </div>
+            <footer>
+                &copy; 2024 Joe Mamdouh. All rights reserved.
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
