@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/*"
+  to = "http://54.227.13.241/:splat"
+  status = 200
+  force = true
